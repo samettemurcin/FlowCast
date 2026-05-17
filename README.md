@@ -5,8 +5,9 @@ Drop your bank file. See your financial future.
 FlowCast turns messy transaction data into clear forecasts, spending insights, and money-saving recommendations no bank login required.
 🌐 Live Demo:
 
-🏠 Landing Page: myflowcast.lovable.app
-🚀 App: tryflowcast.lovable.app
+🏠 Landing Page: https://myflowcast.lovable.app
+
+🚀 App: https://tryflowcast.lovable.app
 
 📸 Screenshots
 
