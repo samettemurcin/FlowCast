@@ -86,5 +86,3 @@ Built for US users managing personal finances or running a small business. Works
 ## 👥 Contributors
 
 Built as a collaborative project. Contributions welcome open an issue or submit a PR.
-
-Built as a collaborative project. Contributions welcome open an issue or submit a PR.
