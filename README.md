@@ -3,19 +3,20 @@ FlowCast 📈
 Drop your bank file. See your financial future.
 
 FlowCast turns messy transaction data into clear forecasts, spending insights, and money-saving recommendations no bank login required.
-🌐 Live Demo
-Link🏠 Landing Pagemyflowcast.lovable.app🚀 Apptryflowcast.lovable.app
+🌐 Live Demo:
+
+🏠 Landing Pagemyflowcast.lovable.app
+🚀 Apptryflowcast.lovable.app
 
 📸 Screenshots
 
-(Add a screenshot here drag and drop an image into this file on GitHub)
-Tip: Take a screenshot of the app dashboard and name it screenshot.png, place it in the repo, then replace this block with:
-![FlowCast Dashboard](<img width="1453" height="681" alt="image" src="https://github.com/user-attachments/assets/8d80ebd6-f456-47c4-bd13-13953ab986eb"/>)
+<img width="1460" height="790" alt="Screenshot 2026-05-17 at 12 19 30 AM" src="https://github.com/user-attachments/assets/95bbddad-fb55-44cf-8dc2-3ca94807c260" />
+
 
 ✨ Features
 
 Spending Breakdown by category, merchant, and day of week
-6–24 Month Forecast Prophet + ARIMA with auto model selection
+6-24 Month Forecast Prophet + ARIMA with auto model selection
 Budget Tracking overspend alerts and monthly summaries
 Anomaly Detection flags transactions outside your normal pattern
 Subscription Detector finds recurring charges you forgot about
