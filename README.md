@@ -1,36 +1,52 @@
-**FlowCast** 📈
+# FlowCast 📈
 
-Drop your bank file. See your financial future.
+> Drop your bank file. See your financial future.
 
 FlowCast turns messy transaction data into clear forecasts, spending insights, and money-saving recommendations no bank login required.
 
-🌐 **Live Demo**:
+---
 
-🏠 Landing Page: https://myflowcast.lovable.app
+## 🌐 Live Demo
 
-🚀 App: https://tryflowcast.lovable.app
+- 🏠 Landing Page: [myflowcast.lovable.app](https://myflowcast.lovable.app)
+- 🚀 App: [tryflowcast.lovable.app](https://tryflowcast.lovable.app)
 
-📸 **Screenshots**
+---
 
-<img width="1460" height="790" alt="Screenshot 2026-05-17 at 12 19 30 AM" src="https://github.com/user-attachments/assets/95bbddad-fb55-44cf-8dc2-3ca94807c260" />
+## 📸 Screenshots
 
-
-✨ **Features**
-
-1.Spending Breakdown by category, merchant, and day of week
-2.6-24 Month Forecast Prophet + ARIMA with auto model selection
-3.Budget Tracking overspend alerts and monthly summaries
-4.Anomaly Detection flags transactions outside your normal pattern
-5.Subscription Detector finds recurring charges you forgot about
-6.Financial Health Score personalized recommendations based on your data
+<img width="1299" height="784" alt="Screenshot 2026-05-17 at 12 33 23 AM" src="https://github.com/user-attachments/assets/b795abdd-48bc-468c-8bbd-85a1eb3f301b" />
 
 
-🛠 **Stack**
-LayerTechnologiesFrontendReact, TypeScript, Tailwind CSSAnalyticsPython, Prophet, statsmodels, pandasHostingLovable, GitHub
+---
 
-🚀 **How to Run Locally**
-Requirements: Python 3.9+
-bash# 1. Clone the repo
+## ✨ Features
+
+- **Spending Breakdown** : by category, merchant, and day of week
+- **6–24 Month Forecast** : Prophet + ARIMA with auto model selection
+- **Budget Tracking** : overspend alerts and monthly summaries
+- **Anomaly Detection** : flags transactions outside your normal pattern
+- **Subscription Detector** : finds recurring charges you forgot about
+- **Financial Health Score** : personalized recommendations based on your data
+
+---
+
+## 🛠 Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React, TypeScript, Tailwind CSS |
+| Analytics | Python, Prophet, statsmodels, pandas |
+| Hosting | Lovable, GitHub |
+
+---
+
+## 🚀 How to Run Locally
+
+**Requirements:** Python 3.9+
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/samettemurcin/FlowCast.git
 cd FlowCast
 
@@ -39,11 +55,17 @@ pip install -r requirements.txt
 
 # 3. Run the app
 python app.py
-Then open your browser and go to http://localhost:8501
-Try it with sample data
-A sample_data.csv file is included in the repo — drop it into the app to see a full demo without needing your own bank file.
+```
 
-📂 **Project Structure**
+Then open your browser and go to `http://localhost:8501`
+
+> A `sample_data.csv` file is included — drop it into the app to see a full demo without needing your own bank file.
+
+---
+
+## 📂 Project Structure
+
+```
 FlowCast/
 ├── app.py              # Main application entry point
 ├── data_processor.py   # CSV parsing, cleaning, and categorization
@@ -51,9 +73,18 @@ FlowCast/
 ├── charts.py           # Visualization components
 ├── requirements.txt    # Python dependencies
 └── sample_data.csv     # Sample bank export for testing
+```
 
-🎯 **Who It's For**
+---
+
+## 🎯 Who It's For
+
 Built for US users managing personal finances or running a small business. Works with any CSV or Excel export from Chase, Bank of America, Wells Fargo, Citi, or any US bank.
 
-👥 Contributors
+---
+
+## 👥 Contributors
+
+Built as a collaborative project. Contributions welcome open an issue or submit a PR.
+
 Built as a collaborative project. Contributions welcome open an issue or submit a PR.
