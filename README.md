@@ -2,7 +2,7 @@
 
 > Drop your bank file. See your financial future.
 
-FlowCast turns messy transaction data into clear forecasts, spending insights, and money-saving recommendations. No bank login, no spreadsheets, no setup.
+FlowCast turns messy transaction data into clear forecasts, spending insights, and money saving recommendations. No bank login, no spreadsheets, no setup.
 
 ## Live Demo
 
@@ -19,13 +19,13 @@ FlowCast turns messy transaction data into clear forecasts, spending insights, a
 
 ## Features
 
-- **CSV Upload** — Works with any bank export (Chase, Bank of America, Wells Fargo, Citi)
-- **Spending Dashboard** — Category breakdown, top merchants, day-of-week patterns
-- **Time Periods** — Filter by This Month, 3M, 6M, or 1Y
-- **Financial Forecast** — Prophet, ARIMA, and Linear Regression models with adjustable horizon
-- **Anomaly Detection** — Flags unusual transactions automatically
-- **Budget Tracking** — Overspend alerts and monthly summaries
-- **Insights** — Plain-language recommendations based on your data
+- **CSV Upload** : Works with any bank export (Chase, Bank of America, Wells Fargo, Citi)
+- **Spending Dashboard** : Category breakdown, top merchants, day-of-week patterns
+- **Time Periods** : Filter by This Month, 3M, 6M, or 1Y
+- **Financial Forecast** : Prophet, ARIMA, and Linear Regression models with adjustable horizon
+- **Anomaly Detection** : Flags unusual transactions automatically
+- **Budget Tracking**: Overspend alerts and monthly summaries
+- **Insights** : Plain-language recommendations based on your data
 
 ---
 
@@ -94,4 +94,4 @@ src/
 
 ## Related
 
-- [FlowCast Backend](https://github.com/samettemurcin/FlowCast) — Python analytics engine (Streamlit, ARIMA, Prophet)
+- [FlowCast Backend](https://github.com/samettemurcin/FlowCast) : Python analytics engine (Streamlit, ARIMA, Prophet)
