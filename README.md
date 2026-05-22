@@ -82,7 +82,6 @@ src/
 │   ├── forecast.tsx       # Financial forecasting
 │   └── insights.tsx       # AI insights
 ├── lib/
-│   ├── mock-data.ts       # Sample data structure
 │   ├── forecast-models.ts # Prophet, ARIMA, Linear models
 │   └── spending-aggregates.ts # CSV parsing and aggregation
 └── components/
