@@ -20,7 +20,7 @@ https://flowcast.samettemurcin.workers.dev/
 - **CSV Upload** : Works with any bank export (Chase, Bank of America, Wells Fargo, Citi)
 - **Spending Dashboard** : Category breakdown, top merchants, day-of-week patterns
 - **Time Periods** : Filter by This Month, 3M, 6M, or 1Y
-- **Financial Forecast** : Prophet, ARIMA, and Linear Regression models with adjustable horizon
+- **Financial Forecast** : Prophet, SARIMA, and Exponential Smoothing (ETS) models with adjustable horizon
 - **Anomaly Detection** : Flags unusual transactions automatically
 - **Budget Tracking**: Overspend alerts and monthly summaries
 - **Insights** : Plain-language recommendations based on your data
@@ -80,7 +80,7 @@ src/
 │   ├── forecast.tsx       # Financial forecasting
 │   └── insights.tsx       # AI insights
 ├── lib/
-│   ├── forecast-models.ts # Prophet, ARIMA, Linear models
+│   ├── forecast-models.ts # Prophet, SARIMA, ETS
 │   └── spending-aggregates.ts # CSV parsing and aggregation
 └── components/
     └── ui/                # Shared UI components
