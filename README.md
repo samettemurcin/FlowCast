@@ -6,8 +6,7 @@ FlowCast turns messy transaction data into clear forecasts, spending insights, a
 
 ## Live Demo
 
-[tryflowcast.vercel.app](https://tryflowcast.vercel.app)
-
+flowcast.samettemurcin.workers.dev
 ---
 
 ## Screenshots
