@@ -34,7 +34,7 @@ https://flowcast.samettemurcin.workers.dev/
 | Frontend | React, TypeScript, TanStack Router, Tailwind CSS |
 | Charts | Recharts |
 | Build | Vite |
-| Hosting | Vercel |
+| Hosting | Cloudflare Workers |
 
 ---
 
@@ -59,7 +59,7 @@ npm run dev
 
 ## How to Use
 
-1. Open the app at [tryflowcast.vercel.app](https://tryflowcast.vercel.app)
+1. Open the app at https://flowcast.samettemurcin.workers.dev/
 2. Click **Start Free** to go to the dashboard
 3. Click **Upload Statement** and drop your bank CSV
 4. Explore Dashboard, Spending, Forecast, and Insights pages
