@@ -14,7 +14,6 @@ FlowCast turns messy transaction data into clear forecasts, spending insights, a
 
 <img width="1185" height="663" alt="Landing page " src="https://github.com/user-attachments/assets/4895cd5e-92d2-4313-9587-c9c6bdebda39" />
 
-
 ---
 
 ## Features
@@ -66,7 +65,7 @@ npm run dev
 3. Click **Upload Statement** and drop your bank CSV
 4. Explore Dashboard, Spending, Forecast, and Insights pages
 
-A sample CSV is available in the [FlowCast backend repo](https://github.com/samettemurcin/FlowCast) for testing.
+A sample CSV is available in the FlowCast backend repo for testing.
 
 ---
 
@@ -92,4 +91,4 @@ src/
 
 ## Related
 
-- [FlowCast Backend](https://github.com/samettemurcin/FlowCast) : Python analytics engine (Streamlit, ARIMA, Prophet)
+- FlowCast Backend: Python analytics engine (Streamlit, ARIMA, Prophet)
