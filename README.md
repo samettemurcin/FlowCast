@@ -7,6 +7,7 @@ FlowCast turns messy transaction data into clear forecasts, spending insights, a
 ## Live Demo
 
 flowcast.samettemurcin.workers.dev
+
 ---
 
 ## Screenshots
