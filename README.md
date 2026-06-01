@@ -1,93 +1,118 @@
-# FlowCast
+# FlowCast : Python Analytics Backend
 
-> Drop your bank file. See your financial future.
-
-FlowCast turns messy transaction data into clear forecasts, spending insights, and money saving recommendations. No bank login, no spreadsheets, no setup.
-
-## Live Demo
-
-https://flowcast.samettemurcin.workers.dev/
----
-
-## Screenshots
-
-<img width="1185" height="663" alt="Landing page " src="https://github.com/user-attachments/assets/4895cd5e-92d2-4313-9587-c9c6bdebda39" />
+> Time series forecasting engine powering the FlowCast personal finance platform.
 
 ---
 
-## Features
+## What It Does
 
-- **CSV Upload** : Works with any bank export (Chase, Bank of America, Wells Fargo, Citi)
-- **Spending Dashboard** : Category breakdown, top merchants, day-of-week patterns
-- **Time Periods** : Filter by This Month, 3M, 6M, or 1Y
-- **Financial Forecast** : Prophet, SARIMA, and Exponential Smoothing (ETS) models with adjustable horizon
-- **Anomaly Detection** : Flags unusual transactions automatically
-- **Budget Tracking**: Overspend alerts and monthly summaries
-- **Insights** : Plain-language recommendations based on your data
+This is the Python backend for FlowCast. It handles all forecasting and statistical analysis:
 
----
-
-## Stack
-
-| Layer | Technologies |
-|---|---|
-| Frontend | React, TypeScript, TanStack Router, Tailwind CSS |
-| Charts | Recharts |
-| Build | Vite |
-| Hosting | Cloudflare Workers |
+- **Prophet forecasting** — trend decomposition with seasonal patterns
+- **ARIMA forecasting** — seasonal ARIMA with widening confidence intervals
+- **Auto model selection** — holdout RMSE comparison picks the best model automatically
+- **STL decomposition** — trend, seasonal, and residual breakdown on monthly spend data
+- **Data validation** — cleans and normalizes transaction DataFrames before modeling
 
 ---
 
-## How to Run Locally
+## File Structure
 
-**Requirements:** Node.js 18+
+```
+FlowCast/
+├── app.py                 # Streamlit app entry point
+├── forecaster.py          # Prophet, ARIMA, auto-selection, STL decomposition
+├── data_processor.py      # CSV parsing, category tagging, aggregation
+├── charts.py              # Visualization helpers
+├── requirements.txt       # Python dependencies
+└── sample_data.csv        # 256 Chase transactions (Jan–Dec 2024) for testing
+```
+
+---
+
+## Forecasting Models
+
+| Model | Method | Best For |
+|---|---|---|
+| Prophet | Trend decomposition + seasonality | Data with strong seasonal patterns |
+| ARIMA (2,1,2) | Seasonal ARIMA | Smooth baseline with gradual trend |
+| Auto | Holdout RMSE comparison | Automatically picks best model |
+
+Auto mode splits data into train/holdout (last 3 months), scores both models on RMSE, and selects the winner. Falls back to Prophet if ARIMA fails.
+
+---
+
+## Core Function
+
+```python
+from forecaster import get_forecast
+
+# df must have 'ds' (date) and 'y' (spend amount) columns
+forecast_df, model_used = get_forecast(
+    df,
+    method="auto",      # "prophet", "arima", or "auto"
+    periods=6,          # months ahead
+    interval_width=0.95
+)
+```
+
+Returns a DataFrame with `ds`, `yhat`, `yhat_lower`, `yhat_upper` columns.
+
+---
+
+## STL Decomposition
+
+```python
+from forecaster import stl_decomposition_monthly
+
+decomp = stl_decomposition_monthly(df)
+# Returns: ds, trend, seasonal, resid
+```
+
+---
+
+## Getting Started
+
+**Requirements: Python 3.9+**
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/samettemurcin/tryflowcast.git
-cd tryflowcast
+git clone https://github.com/samettemurcin/FlowCast.git
+cd FlowCast
 
 # 2. Install dependencies
-npm install
+pip install -r requirements.txt
 
-# 3. Start dev server
-npm run dev
+# 3. Run the Streamlit app
+streamlit run app.py
 ```
-
 
 ---
 
-## How to Use
+## Sample Data
 
-1. Open the app at https://flowcast.samettemurcin.workers.dev/
-2. Click **Start Free** to go to the dashboard
-3. Click **Upload Statement** and drop your bank CSV
-4. Explore Dashboard, Spending, Forecast, and Insights pages
-
-A sample CSV is available in the FlowCast backend repo for testing.
+`sample_data.csv` contains 256 real-format Chase transactions from Jan–Dec 2024 for local testing.
 
 ---
 
-## Project Structure
+## Roadmap
 
-```
-src/
-├── routes/
-│   ├── index.tsx          # Landing page
-│   ├── dashboard.tsx      # Main dashboard
-│   ├── spending.tsx       # Spending analysis
-│   ├── budget.tsx         # Budget tracking
-│   ├── forecast.tsx       # Financial forecasting
-│   └── insights.tsx       # AI insights
-├── lib/
-│   ├── forecast-models.ts # Prophet, SARIMA, ETS
-│   └── spending-aggregates.ts # CSV parsing and aggregation
-└── components/
-    └── ui/                # Shared UI components
-```
+- [ ] Connect live inference to React frontend (API endpoint)
+- [ ] Add ETS (Exponential Smoothing) model
+- [ ] Multi-category forecasting (per-category spend projection)
+- [ ] Anomaly detection model (Isolation Forest)
+- [ ] Docker container for deployment
 
 ---
 
 ## Related
 
-- FlowCast Backend: Python analytics engine (Streamlit, ARIMA, Prophet)
+[tryflowcast](https://github.com/samettemurcin/tryflowcast) — React frontend (TypeScript, Tailwind, Cloudflare Workers)
+
+---
+
+## Author
+
+**Samet Temurcin**
+MS Data Analytics Engineering — Northeastern University
+[linkedin.com/in/samet-temurcin](https://linkedin.com/in/samet-temurcin) · [github.com/samettemurcin](https://github.com/samettemurcin)
